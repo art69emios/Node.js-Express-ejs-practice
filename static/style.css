@@ -1,0 +1,108 @@
+      body {
+         background-color: rgb(13, 65, 47);
+         color: aliceblue;
+      }
+
+      .wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         text-align: center;
+      }
+
+      .search {
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 40px;
+         height: 40px;
+         background-color: #fff;
+         border-radius: 60px;
+         margin: 0 auto;
+         transition: all .5s ease;
+         overflow: hidden;
+      }
+
+      .icon {
+         position: absolute;
+         width: 40px;
+         height: 40px;
+         background-color: #fff;
+         left: 0;
+         top: 0;
+         border-radius: 50%;
+         z-index: 999;
+         cursor: pointer;
+      }
+
+      .icon::before {
+         content: '';
+         position: absolute;
+         width: 12px;
+         height: 12px;
+         border-radius: 50%;
+         border: 2px solid rgb(13, 65, 47);
+         left: 8px;
+         top: 9px;
+      }
+
+      .icon::after {
+         content: '';
+         position: absolute;
+         width: 10px;
+         height: 2px;
+         background-color: rgb(13, 65, 47);
+         top: 25px;
+         transform: rotate(45deg);
+      }
+
+      .search.active {
+         width: 300px;
+      }
+
+      .search .input {
+         position: absolute;
+         left: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border: none;
+         height: 60px;
+      }
+
+      .search .input input {
+         border: 0;
+         outline: 0;
+         font-size: 16px;
+      }
+
+      .clear {
+         position: absolute;
+         right: 10px;
+         top: 18px;
+         cursor: pointer;
+      }
+
+      .clear::before,
+      .clear::after {
+         content: '';
+         position: absolute;
+         width: 10px;
+         height: 2px;
+         background: #6b6b6b;
+         right: 0px;
+      }
+
+      .clear::before {
+         transform: rotate(45deg);
+      }
+
+      .clear::after {
+         transform: rotate(-45deg);
+      }
+      a{
+         color: #fff;
+         font-size: 30px;
+      }
